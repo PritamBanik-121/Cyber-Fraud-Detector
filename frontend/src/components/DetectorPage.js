@@ -252,7 +252,7 @@ const DetectorPage = ({ user, onLogout }) => {
 
         {/* Welcome Section */}
         <div className="welcome-section">
-          <h2>Welcome back, <span className="user-name">{user.name}</span></h2>
+          <h2>Welcome<span className="user-name">{user.name}</span></h2>
           <p>Analyze comments for potential scams and cyber threats</p>
         </div>
 
