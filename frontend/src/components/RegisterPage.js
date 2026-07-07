@@ -35,7 +35,7 @@ const RegisterPage = ({ onRegisterSuccess, onSwitchToLogin }) => {
 
     try {
       // 1. Send data to your MongoDB backend API
-      const response = await axios.post(`${API_BASE_URL}/api/auth/register`, {
+      await axios.post(`${API_BASE_URL}/api/auth/register`, {
         name,
         email,
         password

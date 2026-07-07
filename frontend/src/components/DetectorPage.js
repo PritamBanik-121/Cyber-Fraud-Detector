@@ -53,6 +53,7 @@ const RiskGauge = ({ riskPercentage, riskLevel }) => {
 // ========================================
 // ENHANCED RESULT BADGE COMPONENT
 // ========================================
+// eslint-disable-next-line no-unused-vars
 const RiskBadge = ({ riskLevel }) => {
   const getBadgeClass = () => {
     if (riskLevel === 'Non-Scam') return 'safe';
