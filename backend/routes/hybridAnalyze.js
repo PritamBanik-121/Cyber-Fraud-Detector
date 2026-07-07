@@ -2,6 +2,7 @@ const { PythonShell } = require('python-shell');
 const path = require('path');
 
 const ML_SCRIPT = path.join(__dirname, '..', 'ml', 'ml_predict.py');
+const PYTHON_PATH = process.env.PYTHON_PATH || (process.platform === 'win32' ? 'python' : 'python3');
 
 let pyShell = null;
 let pendingResolvers = [];
@@ -11,7 +12,7 @@ function getPyShell() {
 
   pyShell = new PythonShell(ML_SCRIPT, {
     mode: 'json',
-    pythonPath: 'C:\\Python314\\python.exe',
+    pythonPath: PYTHON_PATH,
     pythonOptions: ['-u'],
   });
 

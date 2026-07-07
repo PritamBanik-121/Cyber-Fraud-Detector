@@ -5,8 +5,7 @@ import joblib
 import numpy as np
 import os
 
-BASE_DIR  = r"D:\code files\app_first\cyber-detector"
-ML_DIR    = os.path.join(BASE_DIR, "backend", "ml")
+ML_DIR = os.path.dirname(os.path.abspath(__file__))
 
 vectorizer = joblib.load(os.path.join(ML_DIR, "vectorizer.joblib"))
 clf        = joblib.load(os.path.join(ML_DIR, "rf_model.joblib"))
